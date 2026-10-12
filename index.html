@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Salma! 🎂</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Reem+Kufi:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-gradient-to-br from-purple-900 via-pink-800 to-red-900 text-white font-['Cairo'] min-h-screen relative overflow-x-hidden">
+
+    <!-- Floating Background Animation Elements -->
+    <div class="background-animation overflow-hidden fixed inset-0 pointer-events-none z-0">
+        <div class="floating-icon icon-1">🎈</div>
+        <div class="floating-icon icon-2">✨</div>
+        <div class="floating-icon icon-3">💖</div>
+        <div class="floating-icon icon-4">🎉</div>
+        <div class="floating-icon icon-5">🎁</div>
+        <div class="floating-icon icon-6">⭐</div>
+        <div class="floating-icon icon-7">🎂</div>
+        <div class="floating-icon icon-8">🎈</div>
+        <div class="floating-icon icon-9">💕</div>
+        <div class="floating-icon icon-10">🌟</div>
+        <div class="floating-icon icon-11">🕯️</div>
+        <div class="floating-icon icon-12">🎊</div>
+    </div>
+
+    <!-- STAGE 1: Envelope Screen -->
+    <div id="envelope-screen"
+        class="fixed inset-0 flex flex-col items-center justify-center bg-purple-950/90 z-50 backdrop-blur-md transition-all duration-700">
+        <div class="text-center p-6 cursor-pointer transform hover:scale-105 transition-all duration-300"
+            onclick="goToStage2()">
+            <div
+                class="relative w-64 h-48 bg-pink-600 rounded-lg shadow-2xl border-4 border-pink-400 flex items-center justify-center mx-auto mb-6 group">
+                <div
+                    class="absolute inset-0 border-t-[90px] border-t-pink-500 border-x-[128px] border-x-transparent rounded-t-lg">
+                </div>
+                <!-- Interactive Heart Button -->
+                <div
+                    class="z-10 w-16 h-16 bg-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:animate-bounce">
+                    <i class="fas fa-heart text-white text-3xl"></i>
+                </div>
+            </div>
+            <p class="text-pink-200 text-xl font-bold tracking-wide">إضغطي على القلب لفتح الرسالة ❤️</p>
+        </div>
+    </div>
+
+    <!-- STAGE 2: Password Screen -->
+    <div id="password-screen"
+        class="hidden fixed inset-0 flex flex-col items-center justify-center bg-purple-950/95 z-40 backdrop-blur-md transition-all duration-700">
+        <div
+            class="bg-white/10 p-8 rounded-2xl border border-white/20 shadow-2xl max-w-sm w-full text-center backdrop-blur-lg">
+            <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <i class="fas fa-lock text-white text-2xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-pink-300 mb-6">ادخلي كلمة السر للوصول للموقع 🔐</h2>
+
+            <div class="relative mb-4">
+                <input type="password" id="passwordInput" placeholder="كلمة السر..."
+                    class="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-pink-200 border border-pink-400/50 focus:outline-none focus:ring-2 focus:ring-pink-500 text-center font-bold text-lg">
+                <button onclick="togglePassword()" class="absolute left-3 top-3 text-pink-200 hover:text-white">
+                    <i id="toggleIcon" class="fas fa-eye"></i>
+                </button>
+            </div>
+
+            <p id="errorMessage" class="hidden text-red-400 text-sm mb-4 font-semibold">❌ كلمة السر غير صحيحة، حاولي
+                تاني!</p>
+            <button onclick="checkPassword()"
+                class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition-all">
+                دخول 🎉
+            </button>
+        </div>
+    </div>
+
+    <!-- STAGE 3: Main Website Content -->
+    <div id="main-content" class="hidden relative z-10 max-w-4xl mx-auto px-4 py-12 transition-all duration-1000">
+
+        <!-- Birthday Header -->
+        <header class="text-center mb-12">
+            <h1
+                class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-300 mb-4 font-['Reem_Kufi']">
+                HAPPY BIRTHDAY SALMA! 🎂✨
+            </h1>
+            <p class="text-xl text-pink-200 font-bold">كل سنة وانتي طيبة يا بنت خالي ❤️😂</p>
+        </header>
+
+        <!-- Dynamic Age Counter Section -->
+        <section
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 md:p-8 mb-12 text-center shadow-2xl">
+            <h2 class="text-2xl font-bold text-yellow-300 mb-6 flex items-center justify-center gap-2">
+                <i class="fas fa-hourglass-half"></i> العمر بالظبط من يوم 12/10/2007 ⏱️
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="years" class="block text-3xl md:text-4xl font-extrabold text-pink-400">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">سنة</span>
+                </div>
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="months" class="block text-3xl md:text-4xl font-extrabold text-pink-400">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">شهر</span>
+                </div>
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="days" class="block text-3xl md:text-4xl font-extrabold text-pink-400">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">يوم</span>
+                </div>
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="hours" class="block text-3xl md:text-4xl font-extrabold text-yellow-300">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">ساعة</span>
+                </div>
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="minutes" class="block text-3xl md:text-4xl font-extrabold text-yellow-300">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">دقيقة</span>
+                </div>
+                <div class="bg-purple-900/50 p-4 rounded-2xl border border-pink-500/30">
+                    <span id="seconds"
+                        class="block text-3xl md:text-4xl font-extrabold text-green-400 animate-pulse">0</span>
+                    <span class="text-sm text-gray-200 font-semibold">ثانية</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paragraphs Content -->
+        <div class="space-y-8 text-lg leading-relaxed text-gray-100">
+
+            <article class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
+                <p>كل سنة وانتي طيبة يا بنت خالي ❤️😂🎂<br>
+                    سنة جديدة من عمرك بدأت، وده معناه إن عندك 365 فرصة جديدة تعملي فيها ذكريات حلوة، و12 شهر تكتشفي فيهم
+                    حاجات جديدة، وكمية قرارات هتقولي فيها «المرة دي بجد» ونشوف بقى هنلتزم بكام قرار منهم 😂😂❤️<br><br>
+                    بجد يا رب تكون سنة خفيفة على قلبك، حلوة في تفاصيلها، ومليانة حاجات تفرحك أكتر ما كنتي متوقعة.</p>
+            </article>
+            <article class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
+                <p>عارفة إيه الحلو في بعض الناس؟ إنهم مش محتاجين يعملوا حاجة استثنائية عشان يسيبوا أثر حلو، ساعات مجرد
+                    الكلام معاهم بيحسّن اليوم، وموقف صغير منهم يفضل فاكره الواحد، وضحكة في وقتها ممكن تغيّرمود يوم
+                    كامل.<br><br>
+                    وانتي من الناس اللي وجودها بيضيف حاجة حلوة للأيام، حتى لو انتي شخصيًا مش واخدة بالك من الموضوع، أو
+                    شايفة إنك بتعملي كل ده بشكل عادي جدًا. أصل واضح إن في ناس عندها مواهب مش مكتوبة في الـ CV 😂🤍</p>
+            </article>
+
+            <!-- Flip Photo Gallery Section -->
+            <section class="my-12">
+                <h3 class="text-2xl font-bold text-center text-yellow-300 mb-8">ذكرياتنا الأيقونية 📸 (اقلب الصورة)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Card 1: 2 People Image -->
+                    <div class="flip-card cursor-pointer" onclick="flipCard(this)">
+                        <div class="flip-card-inner relative w-full h-80 rounded-2xl shadow-2xl">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front absolute inset-0 rounded-2xl overflow-hidden border-2 border-pink-400">
+                                <img src="1791834444959.jpg" alt="صورة شخصين" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-1 rounded-full text-sm font-bold border border-white/20">
+                                    اقلب الصورة 🔄
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back absolute inset-0 bg-gradient-to-br from-pink-600 to-purple-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center border-2 border-pink-400">
+                                <p class="text-lg font-bold">معلش بقي ملقتش صوره عدله فا استحملي العبثيه دي 😂<br><br>بس
+                                    والله كانت ايام حلوه ربنا يزودها ف حياة الواحد ❤️✨</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: 3 People Image -->
+                    <div class="flip-card cursor-pointer" onclick="flipCard(this)">
+                        <div class="flip-card-inner relative w-full h-80 rounded-2xl shadow-2xl">
+                            <!-- Front -->
+                            <div
+                                class="flip-card-front absolute inset-0 rounded-2xl overflow-hidden border-2 border-pink-400">
+                                <img src="1791834444914.jpg" alt="صورة 3 أشخاص" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/60 px-4 py-1 rounded-full text-sm font-bold border border-white/20">
+                                    اقلب الصورة 🔄
+                                </div>
+                            </div>
+                            <!-- Back -->
+                            <div
+                                class="flip-card-back absolute inset-0 bg-gradient-to-br from-purple-700 to-pink-800 rounded-2xl p-6 flex flex-col items-center justify-center text-center border-2 border-pink-400">
+                                <p class="text-lg font-bold">الصوره الايقونيه بتاعتنا اللي هوا ندفع ثروتنا كلها عشان
+                                    نمسحها 😂💔🔥</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <article class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
+                <p>السنة دي بقى أتمنالك نسخة أحلى من كل حاجة نفسك فيها؛ نجاحات تفرحك، فرص تيجي في وقتها، وأيام تخلص
+                    وانتي حاسة إنك عملتي حاجة حلوة لنفسك.<br><br>
+                    يارب تلاقي فيها أبواب تتفتح من غير ما تفضلي تخبطي عليها كتير، وحاجات كنتي مستنياها تحصل بطريقة أحلى
+                    من توقعاتك، ومواقف تخليكي تقولي: «هو أنا كنت محتاجة كل ده عشان أوصل للحاجة الحلوة دي؟» 😂❤️<br><br>
+                    ويا رب السنة دي تكون من النوع اللي لما يخلص متقوليش «عدّت بسرعة أوي»، لكن تقعدي تحكي عن تفاصيلها
+                    ومواقفها الحلوة حتى بعد ما تخلص.</p>
+            </article>
+
+            <article class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
+                <p>بعيدًا عن كل الهزار، أتمنالك من قلبي راحة بال حقيقية، مش مجرد يوم حلو وبعده أسبوع ضغط 😂🤍<br><br>
+                    يارب متشيليش هم حاجات أكبر من طاقتك، ومتتعبيش نفسك في التفكير في كل حاجة قبل ما تحصل، وتلاقي دايمًا
+                    سبب يخليكي متفائلة حتى لو الأمور مش ماشية زي ما خططتي.<br><br>
+                    وأتمنى إنك تفضلي محاطة بناس وجودهم مريح، وكلامهم صادق، ونيتهم خير ليكي، وإن ربنا يرزقك فرحة من النوع
+                    اللي بتيجي فجأة وتنسيكي إنك كنتي مستنياها أصلًا.<br><br>
+                    والأهم إنك متنسيش تفرحي بالحاجات الصغيرة وإنتي مستنية الحاجات الكبيرة؛ عشان ساعات أحلى تفاصيل الحياة
+                    بتكون حاجات بسيطة جدًا، بس بتفضل في الذاكرة أكتر من حاجات كنا فاكرين إنها أهم حاجة في الدنيا. ❤️</p>
+            </article>
+
+            <article class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
+                <p>المهم بقى، بما إن دي سنة جديدة، فأتمنى السنة اللي فاتت تكون سلّمتك بكل الخبرات المطلوبة، من غير ما
+                    تنقلي معاكي الأخطاء القديمة كأنها عفش 😂😂<br><br>
+                    ابدئي السنة دي بمود حلو، وطموح أكبر، وذكريات أجمل، وسيبي الباقي على ربنا؛ مش لازم كل حاجة تبقى
+                    محسوبة من أول يوم، أهو حتى أحلى المفاجآت لو عرفناها قبلها هتبقى مجرد مواعيد في الأجندة 😂❤️<br><br>
+                    كل سنة وانتي طيبة، وكل سنة وانتي بخير وناجحة ومبسوطة، ويا رب تفضلي دايمًا عندك أسباب كتير تضحكي،
+                    وحاجات أكتر تتحمسي ليها، وأيام لما تفتكريها بعدين تقولي: «الحمد لله إنها حصلت بالشكل ده».<br><br>
+                    Happy Birthday يا بنت خالي ❤️🎂<br>
+                    وعقبال سنين كتير حلوة، كل سنة فيها تكون أحسن من اللي قبلها، وتفضلي دايمًا من الناس اللي وجودها
+                    بيخلّي الدنيا ألطف من غير ما يحاولوا حتى. 🤍</p>
+            </article>
+
+            <!-- Final English Wishes Section -->
+            <section
+                class="bg-gradient-to-r from-pink-600/30 to-purple-600/30 backdrop-blur-md p-8 rounded-3xl border border-pink-400/40 text-center my-12 shadow-2xl">
+                <h3 class="text-2xl font-bold text-yellow-300 mb-4">Warm Birthday Wishes ✨</h3>
+                <p class="text-xl leading-relaxed text-pink-100 font-sans dir-ltr">
+                    "Wishing you a year filled with endless laughter, boundless success, and pure happiness. May all
+                    your dreams turn into reality, and may your journey ahead be blessed with smooth paths and
+                    incredible achievements. Happy Birthday!" 🎉💫
+                </p>
+            </section>
+
+        </div>
+
+        <!-- Footer Signature -->
+        <footer class="mt-16 text-center border-t border-white/20 pt-8 space-y-2">
+            <div class="text-2xl font-black text-pink-300 tracking-wider font-sans">BS Store</div>
+            <div class="text-sm text-pink-200/80 italic font-sans">a touch of love from the heart</div>
+        </footer>
+
+    </div>
+
+    <!-- Custom Script JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

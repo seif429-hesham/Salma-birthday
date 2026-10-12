@@ -1,0 +1,165 @@
+/* General Page Styling */
+body {
+    background: linear-gradient(135deg, #2e1065 0%, #701a75 50%, #831843 100%);
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------
+   Floating Background Icons & Animations
+-------------------------------------------------- */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Basic styling for floating icons */
+.floating-icon {
+    position: absolute;
+    bottom: -100px;
+    font-size: 2.8rem;
+    user-select: none;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    animation: floatUp 12s infinite linear;
+}
+
+/* Distribution across the full screen width and animation delays */
+.icon-1 {
+    left: 5%;
+    font-size: 3.5rem;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.icon-2 {
+    left: 15%;
+    font-size: 2.5rem;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+.icon-3 {
+    left: 25%;
+    font-size: 3.2rem;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+.icon-4 {
+    left: 35%;
+    font-size: 2.8rem;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+.icon-5 {
+    left: 45%;
+    font-size: 3.8rem;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+
+.icon-6 {
+    left: 55%;
+    font-size: 2.6rem;
+    animation-duration: 12s;
+    animation-delay: 3s;
+}
+
+.icon-7 {
+    left: 65%;
+    font-size: 3.4rem;
+    animation-duration: 11s;
+    animation-delay: 6s;
+}
+
+.icon-8 {
+    left: 75%;
+    font-size: 3.0rem;
+    animation-duration: 13s;
+    animation-delay: 2s;
+}
+
+.icon-9 {
+    left: 83%;
+    font-size: 2.8rem;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+.icon-10 {
+    left: 92%;
+    font-size: 3.2rem;
+    animation-duration: 14s;
+    animation-delay: 0.5s;
+}
+
+.icon-11 {
+    left: 50%;
+    font-size: 2.7rem;
+    animation-duration: 16s;
+    animation-delay: 8s;
+}
+
+.icon-12 {
+    left: 10%;
+    font-size: 3.1rem;
+    animation-duration: 12s;
+    animation-delay: 7s;
+}
+
+/* Creative Floating & Swaying Animation Keyframes */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(180deg) scale(1.1) translateX(25px);
+    }
+
+    90% {
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg) scale(0.9) translateX(-25px);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------
+   Flip Card Styling
+-------------------------------------------------- */
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
